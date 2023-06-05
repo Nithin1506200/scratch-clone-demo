@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev:staging": "vite --mode staging",
+    "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint:fix": "eslint . --fix",
@@ -20,7 +20,8 @@
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
     "redux-persist": "^6.0.0",
-    "redux-saga": "^1.2.3"
+    "redux-saga": "^1.2.3",
+    "sass": "^1.62.1"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.2",

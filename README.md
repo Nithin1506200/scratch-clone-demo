@@ -1,4 +1,28 @@
 # react-vite-redux
-react template
 
-A template for react project with clean architecture. Although it is recommended to use frameworks like next.js for production code , react itself is powerful to build a awesome site. Many of the methods followed here can be used with next.js. 
+react template from https://github.com/Nithin1506200/react-vite-redux
+
+## start the project
+
+```sh
+yarn
+yarn dev
+```
+
+### todo features
+
+- [ ] create leftside , middle , and rightside bar ui
+- [ ] leftside bar
+  - [ ] Motion
+  - [ ] Looks
+  - [ ] Control
+  - [ ] Events
+- [ ] right side bar
+  - [ ] sprites bar
+  - [ ] sprites events
+  - [ ] add and remove sprites
+- [ ] middle bar
+  - [ ] zoom
+  - [ ] snap functionality
+- [ ] left and middle
+  - [ ] drag and drop

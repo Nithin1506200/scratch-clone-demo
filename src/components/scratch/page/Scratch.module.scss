@@ -1,0 +1,14 @@
+.scratchPage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .left {
+    width: 20vw;
+  }
+  .middle {
+    width: 50vw;
+  }
+  .right {
+    width: 30vw;
+  }
+}
