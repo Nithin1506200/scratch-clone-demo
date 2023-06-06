@@ -1,0 +1,12 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .nav {
+    height: 3em;
+  }
+  .body {
+    flex-grow: 1;
+    background-color: var(--blue-100);
+  }
+}
