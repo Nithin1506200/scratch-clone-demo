@@ -22,7 +22,7 @@ export function SortableItem(props: {
   useEffect(() => {
     const trigger = (evt: KeyboardEvent) => {
       // toast(evt.key);
-      if (evt.key === 'Backspace') {
+      if (evt.key === 'Backspace' && evt.ctrlKey) {
         if (isFocused) {
           dispatch(
             scratchSlice.actions.deleteBlock({
@@ -33,9 +33,9 @@ export function SortableItem(props: {
         }
       }
     };
-    document.addEventListener('keyup', trigger);
+    document.addEventListener('keydown', trigger);
     return () => {
-      document.removeEventListener('keyup', trigger);
+      document.removeEventListener('keydown', trigger);
     };
   }, [props.id, isFocused, currentSelectedSprite]);
   const style: React.CSSProperties = {
