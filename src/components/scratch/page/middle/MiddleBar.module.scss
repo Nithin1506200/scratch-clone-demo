@@ -2,5 +2,8 @@
   border: var(--border-1);
   border-radius: var(--border-radius-1);
   min-height: 100%;
+  display: flex;
   background-color: white;
+  flex-direction: column;
+  padding: 2em;
 }

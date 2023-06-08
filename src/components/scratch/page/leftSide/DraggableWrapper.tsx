@@ -1,11 +1,11 @@
 import { useDrag } from 'react-dnd';
-import { IAllBlocks, IBlocks } from '../../blocks/types';
+import { ESubTypes, IAllBlocks } from '../../blocks/types';
 
 export default function DraggableWrapper(props: {
-  transferProps: IAllBlocks;
+  transferProps: { type: 'ADD_CARD'; subType: ESubTypes };
   children: JSX.Element;
 }) {
-  const [{ isDragging }, drag] = useDrag({
+  const [, drag] = useDrag({
     item: {
       ...props.transferProps
     },

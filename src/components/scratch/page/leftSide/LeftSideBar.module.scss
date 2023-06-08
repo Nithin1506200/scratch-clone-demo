@@ -3,4 +3,13 @@
   border-radius: var(--border-radius-1);
   min-height: 100%;
   background-color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .title {
+    font-size: large;
+    font-weight: 400;
+  }
 }

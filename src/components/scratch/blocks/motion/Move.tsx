@@ -1,12 +1,19 @@
+import { transformManipulation } from '.';
 import Block_1 from '../generic/block_1/Block_1';
-import { IBlocks } from '../types';
+import { ESubTypes, IBlocks } from '../types';
 
-export type TMove = 'MOTION_MOVE';
-interface props {
-  setSteps?: (e: number) => void;
+export interface IMovePropsData {
   steps: number;
 }
-export type TMoveProps = { type: TMove; props: props };
+interface props extends IMovePropsData {
+  // eslint-disable-next-line no-unused-vars
+  onChange: (e: IMovePropsData) => void;
+}
+
+export type TMoveProps = {
+  type: ESubTypes.MOTION_MOVE;
+  props: props & { onChange: () => IMovePropsData };
+};
 const Move_element = (props: props) => {
   return (
     <Block_1 backgroundColor="var(--primary-blue)">
@@ -15,16 +22,22 @@ const Move_element = (props: props) => {
         type="number"
         value={props.steps || 10}
         onChange={(e) => {
-          props?.setSteps && props?.setSteps(parseInt(e.target.value));
+          props.onChange && props?.onChange({ steps: parseInt(e.target.value) });
         }}
       />
       <span>steps</span>
     </Block_1>
   );
 };
-const Move: IBlocks<props, TMove> = {
+const Move: IBlocks<props, IMovePropsData> = {
   element: Move_element,
-  subType: 'MOTION_MOVE',
-  type: 'MOTION'
+  subType: ESubTypes.MOTION_MOVE,
+  type: 'MOTION',
+  run(spriteId, data) {
+    const promise = new Promise((resolve, reject) => {
+      resolve(transformManipulation(spriteId, { IncPosX: data.steps }));
+    });
+    return promise;
+  }
 };
 export { Move };

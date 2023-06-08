@@ -2,6 +2,7 @@ import { combineReducers } from '@reduxjs/toolkit';
 import dummyReducer from './dummy/dummy.combinedReducer';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer } from 'redux-persist';
+import scratchSlice from './scratch/scratch.slice';
 
 const persistConfig = {
   key: 'root',
@@ -10,7 +11,8 @@ const persistConfig = {
 };
 
 export const rootReducer = combineReducers({
-  dummyReducer
+  dummyReducer,
+  scratch: scratchSlice.reducer
 });
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 export { persistedReducer };

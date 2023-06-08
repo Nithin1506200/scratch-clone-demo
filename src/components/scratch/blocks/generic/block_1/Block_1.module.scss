@@ -1,8 +1,16 @@
 .block_1 {
-  height: 2em;
-  display: flex;
+  min-height: 2em;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border-radius: var(--border-radius-1);
+  max-width: fit-content;
   min-width: 5em;
   color: white;
+  cursor: pointer;
+  input {
+    width: 4em;
+  }
 }

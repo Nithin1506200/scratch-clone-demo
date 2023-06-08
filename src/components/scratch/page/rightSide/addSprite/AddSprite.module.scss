@@ -1,0 +1,39 @@
+.AddSprite {
+  .addButton {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    span {
+      font-weight: 900;
+      font-size: x-large;
+      color: white;
+    }
+    background-color: var(--primary-blue);
+  }
+  .allSprite {
+    backdrop-filter: blur(5px);
+    background-color: rgba(128, 128, 128, 0.088);
+    border-radius: var(--border-radius-1);
+    position: absolute;
+    width: 5em;
+    right: 2em;
+    bottom: 1em;
+    max-height: 50vh;
+    overflow-y: scroll;
+    .eachSprite {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .img {
+        width: 3em;
+        height: 4em;
+        cursor: pointer;
+      }
+    }
+  }
+}

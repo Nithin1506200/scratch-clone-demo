@@ -11,7 +11,7 @@ yarn dev
 
 ### todo features
 
-- [ ] create leftside , middle , and rightside bar ui
+- [x] create leftside , middle , and rightside bar ui
 - [ ] leftside bar
   - [ ] Motion
   - [ ] Looks
@@ -20,9 +20,9 @@ yarn dev
 - [ ] right side bar
   - [ ] sprites bar
   - [ ] sprites events
-  - [ ] add and remove sprites
+  - [x] add and remove sprites
 - [ ] middle bar
   - [ ] zoom
   - [ ] snap functionality
 - [ ] left and middle
-  - [ ] drag and drop
+  - [x] drag and drop

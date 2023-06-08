@@ -1,0 +1,15 @@
+.spriteRenderer {
+  border: var(--border-1);
+  border-radius: var(--border-radius-1);
+  height: 50vh;
+  background-color: white;
+  .renderImg {
+    &[data-is-selected='true'] {
+      filter: drop-shadow(3px 3px 2px var(--primary-blue));
+    }
+    position: absolute;
+    width: 3em;
+    height: 4em;
+    transform: rotate(0deg) translateX(0px) translateY(0px);
+  }
+}

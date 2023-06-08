@@ -1,0 +1,44 @@
+.spriteBox {
+  border: var(--border-1);
+  border-radius: var(--border-radius-1);
+  flex-grow: 1;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  padding: 10px;
+  height: 30vh;
+  gap: 10px;
+  row-gap: 10px;
+  .eachSprite {
+    &[data-is-selected='true'] {
+      box-shadow: var(--box-shadow-1) var(--primary-blue);
+    }
+    cursor: pointer;
+    width: 5em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: var(--border-1);
+    border-radius: var(--border-radius-1);
+    img {
+      width: 3em;
+      height: 3em;
+    }
+    .removeIcon {
+      width: 15px;
+      height: 15px;
+      position: relative;
+      left: 45%;
+      cursor: pointer;
+    }
+  }
+  .addSprite {
+    position: fixed;
+    right: 2em;
+    bottom: 2em;
+    width: 2em;
+  }
+}
