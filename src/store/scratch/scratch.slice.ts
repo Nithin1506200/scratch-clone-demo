@@ -75,6 +75,14 @@ const scratchSlice = createSlice({
         return e;
       });
     },
+    deleteBlock(state, action: PayloadAction<{ currentSprite: string; blockId: string }>) {
+      state.sprites = state.sprites.map((sprite) => {
+        if (sprite.id === action.payload.currentSprite) {
+          sprite.data = sprite.data.filter((data) => data.id !== action.payload.blockId);
+        }
+        return sprite;
+      });
+    },
     resetData(
       state,
       action: PayloadAction<{ currentSelectedId: string; idOfBlock: string; data: any }>
