@@ -5,9 +5,12 @@ import { toast } from 'react-toastify';
 import { arrayMove } from '@dnd-kit/sortable';
 import { DragEndEvent } from '@dnd-kit/core';
 import { RunBlock } from '@/components/scratch/blocks/Blocks.factory';
+import allSpritesSvg from '@/assets/sprites';
+import { v4 } from 'uuid';
+const id = v4();
 const initialState: IScratchState = {
-  sprites: [],
-  currentSliceId: undefined
+  sprites: [{ id, name: allSpritesSvg[0].name, data: [], img: allSpritesSvg[0].img }],
+  currentSliceId: id
 };
 const scratchSlice = createSlice({
   name: 'scratch',
